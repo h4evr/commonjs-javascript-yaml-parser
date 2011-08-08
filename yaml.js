@@ -79,45 +79,12 @@ var YAML =
         };
     }
 
-    // function to create an XMLHttpClient in a cross-browser manner
-    function createXMLHTTPRequest() {
-        var xmlhttp;
-        
-        try {
-            // Mozilla / Safari / IE7
-            xmlhttp = new XMLHttpRequest();
-        } catch (e) {
-            // IE
-            var XMLHTTP_IDS = new Array('MSXML2.XMLHTTP.5.0',
-            'MSXML2.XMLHTTP.4.0',
-            'MSXML2.XMLHTTP.3.0',
-            'MSXML2.XMLHTTP',
-            'Microsoft.XMLHTTP' );
-            var success = false;
-            for (var i=0;i < XMLHTTP_IDS.length && !success; i++) {
-                try {
-                xmlhttp = new ActiveXObject(XMLHTTP_IDS[i]);
-                success = true;
-                } catch (e) {}
-            }
-            if (!success) {
-                throw new Error('Unable to create XMLHttpRequest.');
-            }
-        }
-        
-        return xmlhttp;
-    }
-
-    function fromURL(src, ondone) {
-        var client = createXMLHTTPRequest();
-        client.onreadystatechange = function() {
-            if (this.readyState == 4 || this.status == 200) {
-                var txt = this.responseText;
-                ondone(YAML.eval(txt));
-            }
-        };
-        client.open('GET', src);
-        client.send();
+    function parseFile(path, encoding) {
+		if(typeof encoding === "undefined")
+			encoding = 'utf8';
+		
+        var fs = require('fs');
+		return YAML.eval(fs.readFileSync(path, encoding));
     }
 
     function parser(str) {
@@ -482,12 +449,13 @@ var YAML =
         
     return {        
         /**
-         * Load and parse a YAML file from a URL.
-         * @param {String} src URL from where to load the YAML file
-         * @param {Function} ondone Function that will be called when the file is parsed. The result is passed as an argument.
+         * Load and parse a YAML file from a path.
+         * @param {String} path Path from where to load the YAML file
+         * @param {String} encoding Optional. Defaults to 'utf8'.
+		 * @returns The parsed object.
          * @function
          */
-        fromURL : fromURL,
+        parseFile : parseFile,
         
         /**
          * Parse a YAML file from a string.
@@ -511,3 +479,5 @@ var YAML =
         getProcessingTime : function() { return processing_time; }
     }
 })();
+
+module.exports = YAML;
