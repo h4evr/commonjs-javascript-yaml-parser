@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/2/trunk/lib/jsdoc-toolkit
+END
+jsrun.sh
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/lib/jsdoc-toolkit/jsrun.sh
+END
+jsrun.jar
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/lib/jsdoc-toolkit/jsrun.jar
+END
+jsdebug.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/lib/jsdoc-toolkit/jsdebug.jar
+END
