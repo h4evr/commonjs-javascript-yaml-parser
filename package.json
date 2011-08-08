@@ -1,0 +1,15 @@
+{
+  "author": "Diogo Costa <costa.h4evr@gmail.com> (http://diogocosta.pt.tl/)",
+  "name": "javascript-yaml-parser",
+  "description": "A YAML parser written in javascript. This is the port to CommonJS. Client-side script is available at http://code.google.com/p/javascript-yaml-parser/",
+  "version": "0.0.1",
+  "repository": {
+    "url": ""
+  },
+  "main": "tests/server.js",
+  "engines": {
+    "node": "~v0.5.3"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
