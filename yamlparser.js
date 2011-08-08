@@ -79,14 +79,6 @@ var YAML =
         };
     }
 
-    function parseFile(path, encoding) {
-		if(typeof encoding === "undefined")
-			encoding = 'utf8';
-		
-        var fs = require('fs');
-		return YAML.eval(fs.readFileSync(path, encoding));
-    }
-
     function parser(str) {
         var regLevel = regex["regLevel"];
         var invalidLine = regex["invalidLine"];
@@ -448,15 +440,6 @@ var YAML =
     }
         
     return {        
-        /**
-         * Load and parse a YAML file from a path.
-         * @param {String} path Path from where to load the YAML file
-         * @param {String} encoding Optional. Defaults to 'utf8'.
-		 * @returns The parsed object.
-         * @function
-         */
-        parseFile : parseFile,
-        
         /**
          * Parse a YAML file from a string.
          * @param {String} str String with the YAML file contents.
