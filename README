@@ -18,7 +18,11 @@ simply structured YAML files.
 
 INSTALLATION
 
-ToDo
+The parser is available as a NPM module, this is the recommended way of installation.
+
+Run the following command and you should be ready to go:
+
+	npm install yamlparser -g
 
 DOCUMENTATION
 
