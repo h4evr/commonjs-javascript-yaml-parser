@@ -1,6 +1,0 @@
-Project: javascript-yaml-parser
-
-06 May 2011:
-  - Output objects are now of the correct type
-  - Recognition of inline maps corrected
-  
