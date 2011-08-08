@@ -1,5 +1,5 @@
 var http = require('http');
-var yaml = require('../src/yaml.js');
+var yaml = require('../yaml.js');
 
 http.createServer(function(req, res) {
 	res.writeHead(200, {'Content-Type' : 'text/plain' });
