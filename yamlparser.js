@@ -47,7 +47,7 @@ var YAML =
             "map" : new RegExp("\\{\\s*(.*)\\s*\\}"),
             "key_value" : new RegExp("([a-z0-9_-][ a-z0-9_-]*):( .+)", "i"),
             "single_key_value" : new RegExp("^([a-z0-9_-][ a-z0-9_-]*):( .+?)$", "i"),
-            "key" : new RegExp("([a-z0-9_-][ a-z0-9_-]+):( .+)?", "i"),
+            "key" : new RegExp("([a-z0-9_-][ a-z0-9_-]*):( .+)?", "i"),
             "item" : new RegExp("^-\\s+"),
             "trim" : new RegExp("^\\s+|\\s+$"),
             "comment" : new RegExp("([^\\\'\\\"#]+([\\\'\\\"][^\\\'\\\"]*[\\\'\\\"])*)*(#.*)?")
