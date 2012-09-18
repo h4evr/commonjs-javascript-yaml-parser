@@ -409,7 +409,7 @@ var YAML =
         var r = regex["comment"];
         
         for(var i in lines) {
-            if(m = lines[i].match(r)) {
+            if(m = (typeof lines[i] === 'string' && lines[i].match(r))) {
 /*                var cmt = "";
                 if(typeof m[3] != "undefined")
                     lines[i] = m[1];
