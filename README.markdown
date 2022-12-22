@@ -1,6 +1,8 @@
 YAML Parser for Javascript
 ==========================
 
+**WARNING:** This code is very old and unmaintained. Probably has security issues. You should not depend on it. Consider using a more recent lib.
+
 Author: Diogo Costa (<costa.h4evr@gmail.com>)
 
 Date: 8th August 2011
